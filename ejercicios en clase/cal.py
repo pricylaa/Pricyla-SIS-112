@@ -11,21 +11,25 @@ def calculadora():
     num2 = float(input("Introduce el segundo número: "))
 
     if operacion == '1':
-        print(f"{num1} + {num2} = {num1 + num2}")
+        resultado = num1 + num2
+        print(f"Resultado: {num1} + {num2} = {resultado}")
 
-    elif operacion == '2':
-        print(f"{num1} - {num2} = {num1 - num2}")
+    if operacion == '2':
+        resultado = num1 - num2
+        print(f"Resultado: {num1} - {num2} = {resultado}")
 
-    elif operacion == '3':
-        print(f"{num1} * {num2} = {num1 * num2}")
+    if operacion == '3':
+        resultado = num1 * num2
+        print(f"Resultado: {num1} * {num2} = {resultado}")
 
-    elif operacion == '4':
+    if operacion == '4':
         if num2 != 0:
-            print(f"{num1} / {num2} = {num1 / num2}")
+            resultado = num1 / num2
+            print(f"Resultado: {num1} / {num2} = {resultado}")
         else:
             print("Error: División por cero no es posible")
 
-    else:
+    if operacion not in ['1', '2', '3', '4']:
         print("Operación no válida")
 
 calculadora()
